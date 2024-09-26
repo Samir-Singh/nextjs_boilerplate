@@ -3,21 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: 20 66% 99%;
+  --foreground: 20 51% 4%;
+  --accent: 20 12% 92%;
+  --accent-foreground: 20 12% 32%;
+  --border: 20 15% 94%;
+  --card: 20 66% 98%;
+  --card-foreground: 20 51% 3%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #eeeaea;
+  border-radius: 5px;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply box-border bg-background text-foreground;
 }
 
 @layer utilities {
