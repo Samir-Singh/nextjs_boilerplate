@@ -22,7 +22,7 @@ const Sidebar = () => {
       childrenLink: [
         {
           id: 1,
-          title: "Seat PI",
+          title: "Dashboard",
           href: "/",
         },
         {
@@ -148,18 +148,20 @@ const Sidebar = () => {
 
   return (
     <aside
-      className={`relative  hidden h-screen flex-none border-r bg-card transition-[width] duration-500 md:block hover:overflow-y-auto overflow-hidden ${
-        !isMinimized ? "w-48" : "w-0"
+      className={`relative text-white hidden h-screen flex-none border-r bg-dark transition-[width] duration-500 md:block hover:overflow-y-auto overflow-hidden ${
+        !isMinimized ? "w-40" : "w-0"
       }`}
     >
       <div className="py-4">
-        <nav className="grid items-start gap-2 px-3">
+        <nav className="grid items-start gap-2">
           {SideBarData?.map((item) => (
             <div
               key={item?.id}
               href="/dashboard"
-              className={`py-2 px-3 rounded-md gap-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground ${
-                item?.isActive ? "bg-accent" : "bg-transparent"
+              className={`py-2 px-3 rounded-md gap-2 text-sm font-medium hover:bg-custom-gradient hover:text-accent-foreground ${
+                item?.isActive
+                  ? "bg-custom-gradient border-l-4 border-l-blue-500"
+                  : "bg-transparent"
               } cursor-pointer`}
             >
               <div
@@ -180,9 +182,9 @@ const Sidebar = () => {
                   <ul className="mt-4 mb-5.5 flex flex-col gap-2.5">
                     {item?.childrenLink?.map((item) => (
                       <li
-                        className={`hover:color-black ${
-                          item?.isActive && "bg-white"
-                        } hover:bg-white pl-6 rounded-md`}
+                        className={`hover:text-black ${
+                          item?.isActive && "bg-white text-dark"
+                        } hover:bg-white pl-1 rounded-md`}
                         key={item?.id}
                       >
                         <Link className="py-1 block" href={item?.href}>

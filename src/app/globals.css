@@ -5,27 +5,38 @@
 :root {
   --background: 20 66% 99%;
   --foreground: 20 51% 4%;
-  --accent: 20 12% 92%;
-  --accent-foreground: 20 12% 32%;
-  --border: 20 15% 94%;
-  --card: 20 66% 98%;
-  --card-foreground: 20 51% 3%;
+  --dark: #222e3c;
+  --lightGradient: linear-gradient(
+    90deg,
+    rgba(59, 125, 221, 0.1),
+    rgba(59, 125, 221, 0.088) 50%,
+    transparent
+  );
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 3px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: white;
+  background: #222e3c;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #eeeaea;
   border-radius: 5px;
+}
+
+.table_container::-webkit-scrollbar {
+  width: auto !important;
+  height: 5px !important;
+}
+
+.table_container::-webkit-scrollbar-track {
+  background: white !important;
 }
 
 body {

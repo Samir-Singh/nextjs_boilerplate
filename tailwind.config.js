@@ -8,17 +8,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        border: "hsl(var(--border))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
+        dark: "var(--dark)",
+        "light-gradient": "var(--lightGradient)",
+      },
+
+      backgroundImage: {
+        "custom-gradient":
+          "linear-gradient(90deg, rgba(59, 125, 221, 0.1), rgba(59, 125, 221, 0.088) 50%, transparent)",
       },
     },
   },

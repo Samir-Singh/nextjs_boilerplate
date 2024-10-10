@@ -11,7 +11,7 @@ import TableContainer from "@mui/material/TableContainer";
 
 const Component = () => {
   return (
-    <div className="h-[calc(100dvh-25px)] overflow-scroll">
+    <div className="h-[calc(100dvh-25px)] overflow-scroll bg-[#f5f7fb]">
       <div className="px-6 py-3 w-full">
         <div className="flex">
           <h1 className="text-2xl font-semibold">
@@ -42,7 +42,7 @@ const Component = () => {
         </div>
 
         <div className="mt-3">
-          <TableContainer component={Paper}>
+          <TableContainer component={Paper} className="table_container">
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
@@ -120,7 +120,7 @@ const Component = () => {
           </TableContainer>
         </div>
 
-        <div className="flex mt-5 justify-end items-center">
+        <div className="flex mt-5 justify-end items-center mb-5">
           <Pagination count={10} />
         </div>
       </div>
